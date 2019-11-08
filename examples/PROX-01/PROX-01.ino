@@ -27,11 +27,21 @@ void setup() {
 }
 
 void loop() {
-  Serial.print("Value: ");
-  Serial.println(getIR());
-  delay(1000);
+  if(getIR(500)) {
+    Serial.println("No detection");
+  }
+  else {
+    Serial.println("Motion Detected");
+  }
 }
 
-uint8_t getIR() {
-  return gpio.digitalRead(GPIO1_VO);
+uint8_t getIR(int millisecond_wait) {
+  long current_millis = millis();
+  uint8_t value = 1;
+  while (current_millis + millisecond_wait >= millis()) {
+    if(!gpio.digitalRead(GPIO1_VO)) {
+      value = 0;
+    }
+  }
+  return value;
 }

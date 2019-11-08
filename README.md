@@ -1,6 +1,6 @@
 # PCA9534 I/O Expander
 
-PCA9534 GPIO expander library for Particle devices with Particle like API calls. It makes working with PCA9534 I/O expander pins easier, with familiar functions like `pinMode()` and `digitalWrite()`. Refer to the [datasheet](http://www.ti.com/lit/ds/symlink/pca9534.pdf) for more information about the chip.
+PCA9534 GPIO expander library for Particle devices with Particle like API calls. It makes working with PCA9534 I/O expander pins easier, with familiar functions like `pinMode()` and `digitalWrite()`. Refer to the [datasheet](pca9534.pdf) for more information about the chip.
 
 ## Usage
 

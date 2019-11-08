@@ -120,6 +120,5 @@ void loop() {
 ```
 
 ## LICENSE
-Copyright 2017 Abdulrahman Saleh Khamis
-
-Licensed under the MIT license
+Copyright 2017 Abdulrahman Saleh Khamis (original author) Licensed under the MIT license
+Copyright 2019 Jake Pring (modifier) Additions/Modifications licensed as GPLv3

@@ -1,4 +1,6 @@
 #include "PCA9534.h"
+#include <Wire.h>
+
 
 PCA9534::PCA9534() {
   _i2caddr = 0;
@@ -49,11 +51,11 @@ void PCA9534::pinMode(uint8_t pin, uint8_t mode) {
 
 void PCA9534::digitalWrite(uint8_t pin, uint8_t value) {
   switch (value) {
-    case HIGH:
+    case 1:
       // Set the pin HIGH on the output register
       _port |= (1 << pin);
       break;
-    case LOW:
+    case 0:
     default:
       // Set the pin LOW on the output register
       _port &= ~(1 << pin);
@@ -83,5 +85,5 @@ uint8_t PCA9534::digitalRead(uint8_t pin) {
   while (Wire.available()) {
     buff = Wire.read();
   }
-  return (buff & (1 << pin)) ? HIGH : LOW;
+  return (buff & (1 << pin)) ? 1 : 0;;
 }

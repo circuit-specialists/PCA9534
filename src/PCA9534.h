@@ -1,6 +1,8 @@
 #pragma once
 
-/* PCA9534 library by Abdulrahman Saleh Khamis
+/* PCA9534 library
+ * Written Originally by Abdulrahman Saleh Khamis
+ * Modified for use by Arduino by Jake Pring CircutSpecialists.com
  *
  * This library allows for easy interfacing with PCA9534 GPIO expander chip
  * using I2C protocol. It has familiar functions when dealing with the pins
@@ -9,9 +11,9 @@
  * It also allows using inverted input, as well as interrupt when input status
  * changes, to avoid continuous polling.
  */
-
-// This will load the definition for common Particle variable types
-#include "Particle.h"
+ 
+#include <Arduino.h>
+#include <Wire.h>
 
 #define PCA9534_I2C_ADDRESS     0x20
 #define PCA9534_IP_REGISTER     0x00
